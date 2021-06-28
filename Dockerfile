@@ -9,5 +9,5 @@ RUN apk add php7-fpm php7-dev \
 
 RUN sed -i 's/LoadModule mpm_worker_module modules\/mod_mpm_worker.so/LoadModule mpm_event_module modules\/mod_mpm_event.so/g' /etc/apache2/httpd.conf
 RUN sed -i 's/\/usr\/sbin\/httpd/php\-fpm7 \-D \&\& \/usr\/sbin\/httpd/g' /opt/server.sh
-COPY config/apache2/conf.d/php7.conf /etc/apache2/conf.d/php7.conf
+COPY config/php7.conf /etc/apache2/conf.d/php7.conf
 
