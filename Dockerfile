@@ -1,4 +1,4 @@
-FROM altshiftzero/apache:latest
+FROM altshiftzero/apache:alpine-3.15
 RUN apk update && apk upgrade && \
     apk add --no-cache php7-fpm php7-dev \
                        php7-xml php7-mbstring php7-zip php7-gettext php7-json \
